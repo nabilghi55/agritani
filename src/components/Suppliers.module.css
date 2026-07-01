@@ -1,0 +1,219 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+.titleSection {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 576px) {
+  .titleSection {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.titleText h1 {
+  font-family: var(--font-title);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-900);
+}
+
+.titleText p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.addButton {
+  background-color: var(--primary-600);
+  color: var(--text-on-primary);
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast);
+  align-self: flex-start;
+}
+
+.addButton:hover {
+  background-color: var(--primary-700);
+}
+
+/* Grid of supplier cards */
+.supplierGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .supplierGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.supplierCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.supplierCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-premium);
+  border-color: rgba(22, 101, 52, 0.12);
+}
+
+.supplierInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.supplierName {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-950);
+}
+
+.supplierDesc {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  background-color: #fafcfb;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--primary-500);
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.contactIcon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Actions panel in card footer */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 16px;
+  gap: 12px;
+}
+
+.supplierAdminActions {
+  display: flex;
+  gap: 4px;
+}
+
+.btnEdit, .btnDelete {
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.btnEdit {
+  color: var(--text-secondary);
+  background-color: #f1f5f9;
+}
+
+.btnEdit:hover {
+  background-color: #e2e8f0;
+}
+
+.btnDelete {
+  color: var(--danger-500);
+}
+
+.btnDelete:hover {
+  background-color: var(--danger-50);
+}
+
+/* WhatsApp Button: Eye catching, friendly */
+.waButton {
+  background-color: #25d366; /* Official WhatsApp green */
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 4px 6px -1px rgba(37, 211, 102, 0.2);
+}
+
+.waButton:hover {
+  background-color: #20ba5a;
+  transform: translateY(-1px);
+}
+
+.waIcon {
+  font-size: 16px;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  text-align: center;
+  color: var(--text-muted);
+  grid-column: 1 / -1;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.emptyStateIcon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
